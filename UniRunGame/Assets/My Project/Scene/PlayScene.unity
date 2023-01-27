@@ -1089,7 +1089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 733116234649677853, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 733116234649677853, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1147,7 +1147,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 905628599033750743, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781526093507285781, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094879015046714577, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4781526093507285781, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
+    - {fileID: 8094879015046714577, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78a4a0ba2661f7f4ea481cee8e785db1, type: 3}
 --- !u!224 &1823975645 stripped
 RectTransform:
@@ -1163,6 +1177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1900983740}
+  - component: {fileID: 1900983741}
   m_Layer: 5
   m_Name: ScrollPlatform
   m_TagString: Untagged
@@ -1191,6 +1206,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1900983741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900983739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae91cafdd83b6d7479701674b486afc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabName: PlatformPrefab
+  scrollingObjCount: 3
+  scrollingSpeed: 500
 --- !u!1 &1916292926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961319384}
   - component: {fileID: 1961319386}
+  - component: {fileID: 1961319387}
   m_Layer: 5
   m_Name: ScrollBackGround
   m_TagString: Untagged
@@ -1484,9 +1515,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961319383}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1490e93c5d1cfcc49889ce1d92963c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabName: BgPrefab
+  scrollingObjCount: 3
+  scrollingSpeed: 100
+--- !u!114 &1961319387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961319383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439ce2d6cdde87d4eaa3e00754ab4011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabName: BgPrefab
@@ -1558,7 +1604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2097547595
 RectTransform:
   m_ObjectHideFlags: 0

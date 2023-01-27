@@ -7,15 +7,18 @@ public class ScrollingObjController : MonoBehaviour
     public string prefabName = default;
     public int scrollingObjCount = default;
     public float scrollingSpeed = 100.0f;
-    private GameObject objPrefab = default;
+    protected GameObject objPrefab = default;
     protected Vector2 objPrefabSize = default;
     protected List<GameObject> scrollingPool = default;
+    protected float prefabYPos = default;
+
     public virtual void Start()
     {
         objPrefab = gameObject.FindChildObj(prefabName);
         scrollingPool = new List<GameObject>();
         GFunc.Assert(objPrefab != null || objPrefab != default);
-        objPrefabSize.x = objPrefab.GetRectSizeDelta().x;
+        objPrefabSize = objPrefab.GetRectSizeDelta();
+        prefabYPos = objPrefab.transform.localPosition.y;
         //{스크롤링 풀을 생성해서 주어진 수만큼 초기화
         GameObject tempObj = default;
         if (scrollingPool.Count <= 0)
