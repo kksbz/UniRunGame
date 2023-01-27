@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
 
         playerRigid.velocity = Vector2.zero;
         isDead = true;
+        //플레이어 사망 시 UI 처리
+        GameManager.instance.OnPlayerDead();
     } //Die
 
     //트리거 충돌 감지 처리를 위한 함수

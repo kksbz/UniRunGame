@@ -16,6 +16,14 @@ public static partial class GFunc
     }
 
     [System.Diagnostics.Conditional("DEBUG_MODE")]
+    public static void LogWarning(object message)
+    {
+#if DEBUG_MODE
+        Debug.LogWarning(message);
+#endif
+    }
+
+    [System.Diagnostics.Conditional("DEBUG_MODE")]
     public static void Log(object message, Object context)
     {
 #if DEBUG_MODE
@@ -48,7 +56,7 @@ public static partial class GFunc
     public static bool IsValid<T>(this T component_)
     {
         bool isValid = component_.Equals(null) == false;
-        
+
         return isValid;
     }
     #endregion //Vaild Func
